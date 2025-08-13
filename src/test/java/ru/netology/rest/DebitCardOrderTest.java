@@ -29,7 +29,7 @@ class DebitCardOrderTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
-//  options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
     }
 
@@ -51,7 +51,7 @@ class DebitCardOrderTest {
         driver.findElement(By.cssSelector("[data-test-id='agreement'] .checkbox__box")).click();
         driver.findElement(By.tagName("button")).click();
         WebElement result = driver.findElement(By.cssSelector("[data-test-id='order-success']"));
-                assertTrue(result.isDisplayed());
+        assertTrue(result.isDisplayed());
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", result.getText().trim());
 
 

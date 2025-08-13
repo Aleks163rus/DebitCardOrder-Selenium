@@ -1,0 +1,1 @@
+[![Java CI with Gradle](https://github.com/Aleks163rus/DebitCardOrder-Selenium/actions/workflows/gradle.yml/badge.svg)](https://github.com/Aleks163rus/DebitCardOrder-Selenium/actions/workflows/gradle.yml)
