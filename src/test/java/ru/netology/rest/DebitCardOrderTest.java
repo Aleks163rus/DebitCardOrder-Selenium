@@ -143,15 +143,15 @@ class DebitCardOrderTest {
     // тест без согласия обработки данных
 
     @Test
-    void withoutСonsent() {
+    void withoutConsent() {
 
         WebElement form = driver.findElement(By.cssSelector("form"));
         form.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Клоков Алексей");
         form.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79033003333");
         driver.findElement(By.tagName("button")).click();
-        WebElement result = driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid"));
-        assertTrue(result.isDisplayed());
-        assertTrue(result.getAttribute("class").contains("input_invalid"));
+       assertTrue(driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid")).isDisplayed());
+
+
 
 
     }
